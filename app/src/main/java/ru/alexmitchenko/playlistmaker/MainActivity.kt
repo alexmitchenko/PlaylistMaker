@@ -17,18 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnSearchClickListener: View.OnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                Toast.makeText(this@MainActivity, "Нажата кнопка Поиск", Toast.LENGTH_LONG).show()
-            }
-        }
         btnSearch = findViewById<Button?>(R.id.btn_search).apply {
-            setOnClickListener(btnSearchClickListener)
+            setOnClickListener {
+                startActivity(Intent(this@MainActivity, SearchActivity::class.java))
+            }
         }
 
         btnMedia = findViewById<Button?>(R.id.btn_media).apply {
             setOnClickListener {
-                Toast.makeText(this@MainActivity, "Нажата кнопка Медиатека", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this@MainActivity, MediaActivity::class.java))
             }
         }
 
@@ -37,5 +34,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
             }
         }
+
     }
 }
