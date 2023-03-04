@@ -38,7 +38,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btn_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/main_padding"
@@ -57,7 +57,7 @@
             app:iconTint="@color/black" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btn_media"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/main_padding"
